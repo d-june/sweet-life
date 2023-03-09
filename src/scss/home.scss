@@ -1,0 +1,355 @@
+//====================================================================================================
+.main {
+	&__products {
+		padding: rem(50) rem(0);
+	}
+	&__constructor {
+	}
+}
+
+//====================================================================================================
+
+.products-main {
+
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(260px, 1fr));
+		gap: rem(20);
+	}
+
+	&__title {
+		color: $corall;
+		margin-bottom: rem(20);
+	}
+
+	&__item {
+	}
+}
+.item-products-main {
+	border-radius: rem(5);
+	overflow: hidden;
+	box-shadow: 0 0 1px rgb(96, 96, 96);
+	font-size: rem(12);
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0 0 15px rgb(163, 161, 161);
+		}
+	}
+	&__image {
+	}
+
+	&__image-ibg {
+		height: rem(200);
+		display: block;
+		position: relative;
+		background: url("../img/loading.gif") center / 50px no-repeat;
+		width: 100%;
+	}
+
+	&__picture {
+	}
+
+	&__body {
+		padding: rem(20);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__title {
+		font-weight: 700;
+		margin-bottom: rem(10);
+		font-size: rem(15);
+	}
+
+	&__consist {
+		margin-bottom: rem(10);
+		line-height: 120%;
+		flex: 1 1 auto;
+		span {
+			font-weight: 700;
+			color: $corall;
+		}
+	}
+
+	&__buy {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+	
+	&__price {
+		color: $mainColor;
+		font-weight: 700;
+		font-size: rem(16);
+		margin-bottom: rem(10);
+	}
+
+	&__more {
+		font-weight: 500;
+		display: flex;
+		flex-direction: row-reverse;
+		gap: rem(5);
+		&::before {
+			font-size: rem(10);
+		}
+	}
+}
+
+//====================================================================================================
+
+.constructor-main {
+	position: relative;
+	min-height: 100vh;
+	&__background-ibg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(rgba(87, 87, 87, 0.6), rgba(87, 87, 87, 0.3));
+			z-index: 1;
+		}
+	}
+
+	&__body {
+		padding: rem(50) rem(20);
+		color: #fff;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	&__title {
+		margin-bottom: rem(50);
+		text-align: center;
+		width: 100%;
+		color: #fff;
+		line-height: 130%;
+	}
+	&__row {
+		display: grid;
+		grid-template-columns: 45% 45%;
+		justify-content: space-between;
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+			gap: rem(20);
+		}
+		&_bottom {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__decor {
+		display: flex;
+		flex-direction: column;
+		gap: rem(30);
+		.spollers-constructor-main {
+			&__checkbox {
+				display: none;
+			}
+			&__label {
+				line-height: 100%;
+				display: inline-flex;
+				align-items: flex-start;
+				position: relative;
+				width: 100%;
+				cursor: pointer;
+				&::before {
+					content: "";
+					align-self: flex-start;
+					flex: 0 0 rem(18);
+					height: rem(18);
+					border: 2px solid $corall;
+					border-radius: rem(3);
+					margin: 0 rem(10) 0 0;
+				}
+				&::after {
+					content: "";
+					width: rem(10);
+					height: rem(10);
+					position: absolute;
+					top: rem(4);
+					left: rem(4);
+					background-color: $corall;
+					border-radius: rem(2);
+					transform: scale(0);
+					transition: all 0.3s ease 0s;
+				}
+				a {
+					color: $corall;
+					@media(any-hover: hover) {
+						&:hover {
+							border-bottom: 1px dashed $corall;
+						}
+					}
+				}
+			}
+		}
+	}
+			
+}
+
+.spollers-constructor-main__checkbox:checked + .spollers-constructor-main__label::after {
+	transform: scale(1);
+}
+
+.spollers-constructor-main {
+	display: flex;
+	gap: rem(100);
+	@media (max-width: $tablet) {
+		flex-direction: column;
+		gap: rem(20);
+	}
+
+	&__body {
+		
+	}
+
+	&__subtitle {
+		margin-bottom: rem(20);
+		font-weight: 700;
+		font-size: rem(20);
+		._spoller-init & {
+			display: flex;
+			width: 100%;
+			justify-content: flex-start;
+			align-items: center;
+			gap: rem(10);
+			&::after {
+				content: "\e901";
+				font-size: rem(26);
+				transition: transform 0.3s ease 0s;
+				@extend %ic;
+			}
+			&._spoller-active {
+				&::after {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		padding: rem(5);
+		&:not(:last-child){
+			margin-bottom: rem(10);
+		}
+		&.active-popup {
+			background-color: rgba(255, 255, 255, 0.211);
+			border-radius: rem(10);
+		}
+	}
+	&__item {
+		width: 100%;
+	}
+
+	&__choice {
+		margin-bottom: rem(10);
+	}
+	&__picture-ibg {
+		width: rem(40);
+		height: rem(40);
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+	&__btn {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&__label {
+		cursor: pointer;
+		height: rem(40);
+		line-height: rem(40);
+	}
+}
+
+.select {
+	margin-bottom: rem(10);
+	&__title {
+	color: #fff;
+	min-width: rem(300);
+	background-color: rgba(255, 255, 255, 0.211);
+	border: none;
+	}
+
+	&__options {
+	
+	}
+	
+}
+
+.total-constructor-main {
+	&__body {
+		display: flex;
+		gap: rem(20);
+		padding-top: rem(60);
+		align-items: center;
+		justify-content: center;
+		@media(max-width: $tablet) {
+			justify-content: flex-start;
+		}
+		@media(max-width: $mobile) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	&__content {
+		display: flex;
+		gap: rem(20);
+		font-weight: 700;
+		font-size: rem(18);
+	}
+	&__buttons {
+		display: flex;
+		gap: rem(20);
+	}
+
+	&__calculate {
+		font-size: rem(14);
+		padding: rem(10);
+	}
+
+	&__order {
+		opacity: 0;
+		visibility: hidden;
+		font-size: rem(14);
+		padding: rem(10);
+		&.show-button {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+}
+
+//====================================================================================================
+
+.comments-main {
+	padding: rem(30) rem(0);
+	&__title {
+		margin-bottom: rem(30);
+		text-align: center;
+	}
+}
+//====================================================================================================
+
+
+
+
+
+
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================

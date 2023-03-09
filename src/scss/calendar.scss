@@ -1,0 +1,67 @@
+.qs-datepicker-container {
+	background: #fff;
+	color: $mainColor;
+	border: none;
+	width: 60%;
+	@media(max-width: $mobile) {
+		width: 80%;
+	}
+}
+
+.qs-square {
+	color: $mainColor;
+	font-size: rem(16);
+}
+.qs-datepicker .qs-square.qs-day {
+	color: $mainColor;
+	font-size: rem(18);
+}
+
+.qs-controls {
+	background: $corall;
+	padding: rem(5) rem(0);
+}
+
+.qs-datepicker .qs-arrow.qs-left:after {
+	border-right-color: #fff;
+}
+
+.qs-datepicker .qs-arrow.qs-right:after {
+	border-left-color: #fff;
+}
+
+.qs-datepicker .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+	background: $corall;
+	color: #fff;
+}
+
+.qs-datepicker .qs-arrow:hover.qs-left:after {
+	border-right-color: $mainColor;
+}
+.qs-datepicker .qs-arrow:hover.qs-right:after {
+	border-left-color: $mainColor;
+}
+
+.qs-datepicker .qs-month-year:hover {
+	border-bottom: 1px solid #fff;
+}
+
+.qs-datepicker .qs-overlay {
+	background: rgba(250, 247, 247, 0.75);
+	color: $mainColor;
+}
+
+.qs-datepicker .qs-overlay .qs-overlay-year  {
+	color: $mainColor;
+	border-bottom: 1px solid rgba(147, 146, 146, 0.745);
+}
+
+.qs-datepicker .qs-overlay .qs-submit {
+	color: $corall;
+	border: none;
+	padding: rem(5);
+	background-color: inherit;
+}
+.qs-datepicker .qs-overlay .qs-submit.qs-disabled {
+	color: $mainColor;
+}

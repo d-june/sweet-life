@@ -1,0 +1,128 @@
+//====================================================================================================
+.footer {
+	background: linear-gradient(#0d0d0e, #1c1c20);
+	color: $lightPink;
+	padding: rem(50) 0;
+	&__container {
+		border-top: 2px solid rgb(54, 53, 53);
+		border-bottom: 2px solid rgb(54, 53, 53);
+		padding: rem(30) rem(0);
+		@media (max-width: $mobile) {
+			padding: rem(20);
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 48% 48%;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			padding: rem(0) rem(20);
+			gap: rem(30);
+		}
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: rem(30);
+		color: $lightPink;
+		text-align: center;
+		padding: rem(0) rem(20);
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+		&_left {
+			align-items: flex-end;
+			@media (max-width: $mobile) {
+				align-items: center;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		gap: rem(10);
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+	}
+
+	&__text {
+		line-height: 120%;
+		a {
+			color: $corall;
+			transition: all 0.3s ease 0s;
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+		}
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+
+	&__mail {
+		display: flex;
+		gap: rem(10);
+		justify-content: flex-end;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $corall;
+			}
+		}
+	}
+
+	&__phone {
+		display: flex;
+		gap: rem(10);
+		justify-content: flex-end;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $corall;
+			}
+		}
+	}
+
+	&__call {
+		padding: rem(15) rem(20);
+	}
+
+	&__social {
+		display: flex;
+		gap: rem(20);
+		font-size: rem(20);
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+	}
+	&__vk {
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $corall;
+			}
+		}
+	}
+	&__insta {
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $corall;
+			}
+		}
+	}
+}

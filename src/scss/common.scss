@@ -1,0 +1,28 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.btn {
+	background: $corall;
+	color: #fff;
+	text-transform: uppercase;
+	padding: rem(10);
+	display: flex;
+	gap: rem(10);
+	align-items: center;
+	justify-content: center;
+	border-radius: rem(5);
+	font-size: rem(10);
+	transition: background 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background: #fe4e4e;
+		}
+	}
+}
+
+.title {
+	font-size: rem(30);
+	line-height: rem(30);
+	font-weight: 700;
+	color: $corall;
+}
+

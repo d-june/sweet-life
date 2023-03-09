@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Классический крем-чиз"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header-product.htm',{})
+		<main class="main">
+			<section class="main__preloader">
+				@@include('html/_preloader.htm',{})
+			</section>
+			<section class="product">
+				<div class="product__container">
+					<div class="product__breadcrumbs">
+						<a href="index.html" class="product__main">Главная</a>
+						<div class="product__current">Белый торт с крем-чиз</div>
+					</div>
+					<div class="product__wrapper">
+						<div class="product__picture-ibg">
+							<img data-src="@img/products/2.jpg" src="@img/null.png" alt="Белый торт с крем-чиз" class="product__image">
+						</div>
+						<div class="product__description">
+							<h2 class="product__title title">Белый торт с крем-чиз</h2>
+							<p class="product__consist">
+								<span>Состав:</span> яйца, сахар, мука, кукурузный крахмал, сливки, сахарная пудра, сливочный сыр.
+							</p>
+							<div class="product__delivery delivery-product">
+								<div class="delivery-product__item _icon-clock">Доставим в любое удобное время (доставка
+											осуществляется до 21:00)</div>
+								<div class="delivery-product__item _icon-location">Доставим в любое удобное место (Доставка
+											осуществляется по г. Санкт-Петербург и Лен. области.)</div>
+								<div class="delivery-product__item">
+									<div class="delivery-product__icon _icon-truck"></div>
+									<div class="delivery-product__text">Подробнее об условиях доставки можно узнать <a
+													href="#" data-popup="#delivery">здесь</a></div>
+								</div>
+								<div class="delivery-product__item delivery-product__item_small">*заказ нужно сделать
+											минимум за 3 дня до даты
+											доставки</div>
+								<div class="delivery-product__item delivery-product__item_small">*внешний вид торта
+											может
+											отличаться</div>
+							</div>
+							<div class="product__price">Цена: <span>2 800</span> руб.</div>
+							<div class="product__weight">Вес: <span>1.9 кг.</span></div>
+							<button class="product__buy btn" type="button" data-popup="#order-ready">Заказать</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+</html>
